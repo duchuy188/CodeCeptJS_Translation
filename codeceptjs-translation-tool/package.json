@@ -1,0 +1,22 @@
+{
+  "name": "codeceptjs-translation-tool",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "start:debug": "node --inspect server.js",
+    "test": "codeceptjs run --steps --verbose"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "codeceptjs": "^3.0.0",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "codeceptjs": "^3.6.6",
+    "cross-env": "^7.0.3",
+    "playwright": "^1.47.2",
+    "portfinder": "^1.0.32"
+  }
+}

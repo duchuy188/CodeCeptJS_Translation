@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Translation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Add Translation</h1>
+    <a href="/">Back to Home</a>
+    <form action="/add" method="POST">
+        <label for="category">Category:</label>
+        <select name="category" id="category" required>
+            <option value="contexts">Contexts</option>
+            <option value="actions">Actions</option>
+        </select>
+        <br>
+        <label for="key">Key:</label>
+        <input type="text" id="key" name="key" required>
+        <br>
+        <label for="value">Translation:</label>
+        <input type="text" id="value" name="value" required>
+        <br>
+        <button type="submit">Add Translation</button>
+    </form>
+
+    <h2>Translate</h2>
+    <form id="translateForm">
+        <label for="translateInput">Text to translate:</label>
+        <input type="text" id="translateInput" name="input" required>
+        <label for="translateCategory">Category:</label>
+        <select name="category" id="translateCategory">
+            <option value="contexts">Contexts</option>
+            <option value="actions">Actions</option>
+        </select>
+        <button type="submit">Translate</button>
+    </form>
+    <div id="translationResult"></div>
+
+    <script>
+    document.getElementById('translateForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const input = document.getElementById('translateInput').value;
+        const category = document.getElementById('translateCategory').value;
+        const response = await fetch('/translate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ input, category }),
+        });
+        const data = await response.json();
+        document.getElementById('translationResult').textContent = data.translation;
+    });
+    </script>
+</body>
+</html>

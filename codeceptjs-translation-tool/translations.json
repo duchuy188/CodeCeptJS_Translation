@@ -1,0 +1,39 @@
+{
+  "vi": {
+    "hello": "xin chào",
+    "world": "thế giới",
+    "hello world": "xin chào thế giới",
+    "walk": "đi bộ",
+    "study": "học",
+    "learn": "học",
+    "university": "đại học"
+  },
+  "es": {
+    "hello": "hola",
+    "world": "mundo",
+    "hello world": "hola mundo",
+    "good morning": "buenos días",
+    "walk": "caminar",
+    "study": "estudiar",
+    "learn": "aprender",
+    "university": "universidad"
+  },
+  "fr": {
+    "hello": "bonjour",
+    "world": "monde",
+    "hello world": "bonjour le monde",
+    "walk": "marcher",
+    "study": "étudier",
+    "learn": "apprendre",
+    "university": "université"
+  },
+  "de": {
+    "hello": "hallo",
+    "world": "welt",
+    "hello world": "hallo welt",
+    "walk": "gehen",
+    "study": "studieren",
+    "learn": "lernen",
+    "university": "universität"
+  }
+}
